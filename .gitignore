@@ -1,0 +1,4 @@
+# Do not commit source assets or intermediate build outputs
+generated_assets/
+node_modules/
+.DS_Store
