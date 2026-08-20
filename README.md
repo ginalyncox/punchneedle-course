@@ -14,9 +14,10 @@ A self-directed course website for punch needle rug making — from foundations 
 ## Design
 
 - Warm cream + wool navy + terracotta palette derived from the subject matter (wool, monks cloth, natural dye).
-- Boska (Fontshare) display serif paired with Work Sans body.
+- Boska (Fontshare) display serif paired with Work Sans body — both self-hosted as `woff2` under `fonts/`.
 - Full dark mode, responsive layout, editorial multi-column composition.
-- Zero JavaScript frameworks — hand-written HTML/CSS with a tiny 45-line vanilla JS file for the theme toggle and reveal animations.
+- Zero JavaScript frameworks — hand-written HTML/CSS with a small vanilla JS layer for theme bootstrap, theme toggle, mobile menu, and reveal animations.
+- Content-Security-Policy meta tag locking scripts, styles, and fonts to same-origin.
 
 ## Structure
 

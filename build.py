@@ -35,7 +35,7 @@ def render(page_path: Path):
     meta, body = parse_meta(raw)
     title = html.escape(meta.get("TITLE", "Untitled"), quote=True)
     description = html.escape(meta.get("DESCRIPTION", ""), quote=True)
-    nav_key = meta.get("NAV", "")
+    nav_key = html.escape(meta.get("NAV", ""), quote=True)
 
     head = (
         HEAD.replace("{{TITLE}}", title)
