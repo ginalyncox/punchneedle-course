@@ -1,5 +1,7 @@
 # The Loop & The Line
 
+[![Last commit](https://img.shields.io/github/last-commit/ginalyncox/punchneedle-course)](https://github.com/ginalyncox/punchneedle-course/commits)
+
 A self-directed course website for punch needle rug making — from foundations through sculpted, carved pile. Built as a personal learning reference.
 
 ## What's in it
