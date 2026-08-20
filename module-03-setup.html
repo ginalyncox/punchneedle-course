@@ -3,31 +3,17 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta
+  http-equiv="Content-Security-Policy"
+  content="default-src 'none'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'; img-src 'self' data:; style-src 'self'; font-src 'self'; script-src 'self'; connect-src 'none'; object-src 'none'; upgrade-insecure-requests"
+/>
 <meta name="description" content="Cutting, framing, and getting drum-tight tension; four ways to transfer a design onto monks cloth; and why your pattern must be mirrored." />
 <meta property="og:title" content="Module 03 · Setup &amp; Design Transfer" />
 <meta property="og:description" content="Cutting, framing, and getting drum-tight tension; four ways to transfer a design onto monks cloth; and why your pattern must be mirrored." />
 <meta property="og:type" content="website" />
 <title>Module 03 · Setup &amp; Design Transfer — The Loop &amp; The Line</title>
-<script>
-  (function () {
-    try {
-      var stored = localStorage.getItem("theme");
-      var theme =
-        stored === "light" || stored === "dark"
-          ? stored
-          : matchMedia("(prefers-color-scheme: dark)").matches
-            ? "dark"
-            : "light";
-      document.documentElement.setAttribute("data-theme", theme);
-    } catch (e) {}
-    document.documentElement.classList.add("js");
-  })();
-</script>
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link rel="preconnect" href="https://api.fontshare.com" crossorigin />
-<link href="https://api.fontshare.com/v2/css?f[]=boska@400,400i,500,700&display=swap" rel="stylesheet" />
-<link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,300..700;1,400..600&display=swap" rel="stylesheet" />
+<script src="js/theme-boot.js"></script>
+<link rel="stylesheet" href="css/fonts.css" />
 <link rel="stylesheet" href="css/style.css" />
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><circle cx='16' cy='16' r='14' fill='%23f4efe6' stroke='%23253a52' stroke-width='2'/><circle cx='16' cy='16' r='4' fill='%23b95f37'/></svg>" />
 
@@ -88,15 +74,15 @@
 
     <ol class="steps">
       <li>
-        <h4>Measure and mark to the grid</h4>
+        <strong class="steps__title">Measure and mark to the grid</strong>
         Monks cloth has visible warp and weft threads. Cut along the grain — pull a single thread and cut along the resulting line. This gives a straight, clean edge that won't bias-stretch when you frame it.
       </li>
       <li>
-        <h4>Seal the raw edges</h4>
+        <strong class="steps__title">Seal the raw edges</strong>
         Monks cloth ravels aggressively. Options: run a wide zigzag around the perimeter on a sewing machine, apply a strip of masking or duct tape around all four edges, or fold and iron a narrow hem. The tape method is fastest for course work — masking tape is fine, it comes off cleanly at the end.
       </li>
       <li>
-        <h4>Iron before you mark</h4>
+        <strong class="steps__title">Iron before you mark</strong>
         Wrinkles distort your design. A quick press with a warm iron (no steam if you're worried about shrinkage) makes both transfer and framing significantly easier.
       </li>
     </ol>
@@ -106,17 +92,17 @@
 
     <h3>Embroidery hoop</h3>
     <ol class="steps">
-      <li><h4>Lay the fabric over the inner ring</h4>Design side up if you're using a see-through transfer method, or design side down if you've already drawn the mirrored version and will punch on the reverse.</li>
-      <li><h4>Press the outer ring on top</h4>Screw slightly, then work around the fabric edge pulling in every direction until the surface is drum-tight. Tighten the screw. Test with a flick — it should sound like a low drum.</li>
-      <li><h4>Re-tighten every 10–15 minutes</h4>Fabric relaxes as you work. Punching itself pulls the weave slightly. Get in the habit of checking tension.</li>
+      <li><strong class="steps__title">Lay the fabric over the inner ring</strong>Design side up if you're using a see-through transfer method, or design side down if you've already drawn the mirrored version and will punch on the reverse.</li>
+      <li><strong class="steps__title">Press the outer ring on top</strong>Screw slightly, then work around the fabric edge pulling in every direction until the surface is drum-tight. Tighten the screw. Test with a flick — it should sound like a low drum.</li>
+      <li><strong class="steps__title">Re-tighten every 10–15 minutes</strong>Fabric relaxes as you work. Punching itself pulls the weave slightly. Get in the habit of checking tension.</li>
     </ol>
 
     <h3>Gripper frame</h3>
     <ol class="steps">
-      <li><h4>Center the fabric over the frame</h4>Design side up (or mirrored side up if you're punching from the reverse).</li>
-      <li><h4>Press onto the gripper teeth</h4>Start at the middle of one side. Press the fabric onto the metal teeth firmly with your palm. Move to the opposite side and pull the fabric taut before pressing down.</li>
-      <li><h4>Work around all four sides, corners last</h4>Then go around a second time, adjusting anywhere that looks slack. Corners take a bit of coaxing — pull diagonally.</li>
-      <li><h4>Test the tension</h4>Flick. Drum note. Good.</li>
+      <li><strong class="steps__title">Center the fabric over the frame</strong>Design side up (or mirrored side up if you're punching from the reverse).</li>
+      <li><strong class="steps__title">Press onto the gripper teeth</strong>Start at the middle of one side. Press the fabric onto the metal teeth firmly with your palm. Move to the opposite side and pull the fabric taut before pressing down.</li>
+      <li><strong class="steps__title">Work around all four sides, corners last</strong>Then go around a second time, adjusting anywhere that looks slack. Corners take a bit of coaxing — pull diagonally.</li>
+      <li><strong class="steps__title">Test the tension</strong>Flick. Drum note. Good.</li>
     </ol>
 
     <h3>Stretcher bars with staples/tacks</h3>
@@ -191,7 +177,7 @@
       <p>A self-directed field guide to punch needle rug making — from your first hoop through sculpted, carved pile. Built as a personal reference by a maker, for a maker.</p>
     </div>
     <div class="footer-col">
-      <h4>Course</h4>
+      <p class="footer-col__title">Course</p>
       <ul>
         <li><a href="curriculum.html">Curriculum</a></li>
         <li><a href="tools.html">Tools &amp; Materials</a></li>
@@ -201,7 +187,7 @@
       </ul>
     </div>
     <div class="footer-col">
-      <h4>Reference</h4>
+      <p class="footer-col__title">Reference</p>
       <ul>
         <li><a href="troubleshooting.html">Troubleshooting</a></li>
         <li><a href="glossary.html">Glossary</a></li>
