@@ -8,6 +8,21 @@
 <meta property="og:description" content="A self-directed course for punch needle rug making — tools, techniques, sculpted pile, and progressive projects from first hoop to confident maker." />
 <meta property="og:type" content="website" />
 <title>A field guide to punch needle rug making — The Loop &amp; The Line</title>
+<script>
+  (function () {
+    try {
+      var stored = localStorage.getItem("theme");
+      var theme =
+        stored === "light" || stored === "dark"
+          ? stored
+          : matchMedia("(prefers-color-scheme: dark)").matches
+            ? "dark"
+            : "light";
+      document.documentElement.setAttribute("data-theme", theme);
+    } catch (e) {}
+    document.documentElement.classList.add("js");
+  })();
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link rel="preconnect" href="https://api.fontshare.com" crossorigin />
@@ -18,6 +33,7 @@
 
 </head>
 <body>
+<a class="skip-link" href="#main">Skip to content</a>
 <header class="site-header">
   <div class="site-header__inner">
     <a href="index.html" class="site-header__brand" aria-label="The Loop and The Line — home">
@@ -30,7 +46,7 @@
     </a>
 
     <nav class="nav" aria-label="Primary">
-      <div class="nav__links" data-nav-links>
+      <div class="nav__links" data-nav-links id="site-nav">
         <a href="curriculum.html" data-nav="curriculum">Curriculum</a>
         <a href="tools.html" data-nav="tools">Tools &amp; Materials</a>
         <a href="build-your-frame.html" data-nav="build-your-frame">Build a Frame</a>
@@ -41,9 +57,9 @@
       </div>
 
       <div class="nav__actions">
-        <button class="theme-toggle" data-theme-toggle aria-label="Switch color mode"></button>
-        <button class="menu-toggle" data-menu-toggle aria-label="Toggle menu" aria-expanded="false">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        <button type="button" class="theme-toggle" data-theme-toggle aria-label="Switch color mode"></button>
+        <button type="button" class="menu-toggle" data-menu-toggle aria-label="Toggle menu" aria-expanded="false" aria-controls="site-nav">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
         </button>
       </div>
     </nav>
@@ -63,7 +79,7 @@
       </div>
     </div>
     <div class="hero__image reveal">
-      <img src="assets/hero-frame.png" alt="An in-progress punch needle rug on a wooden gripper frame, with terracotta, mustard, navy, and sage wool loops forming an abstract botanical design." />
+      <img src="assets/hero-frame.png" width="1024" height="1536" alt="An in-progress punch needle rug on a wooden gripper frame, with terracotta, mustard, navy, and sage wool loops forming an abstract botanical design." />
     </div>
   </div>
 </section>
@@ -154,7 +170,7 @@
       </div>
     </div>
     <figure class="split__image reveal">
-      <img src="assets/finished-rug.png" alt="A finished punch needle wall hanging with landscape bands of cream, ochre, terracotta, deep navy, and forest green wool loops." />
+      <img src="assets/finished-rug.png" width="1024" height="1536" alt="A finished punch needle wall hanging with landscape bands of cream, ochre, terracotta, deep navy, and forest green wool loops." />
     </figure>
   </div>
 </section>
@@ -162,7 +178,7 @@
 <section class="band band--offset">
   <div class="split split--reverse">
     <figure class="split__image reveal">
-      <img src="assets/carving.png" alt="Hands carving into a dense wool pile with small curved appliqué scissors to sculpt a dimensional design." />
+      <img src="assets/carving.png" width="1024" height="1536" alt="Hands carving into a dense wool pile with small curved appliqué scissors to sculpt a dimensional design." />
     </figure>
     <div class="split__text reveal">
       <div class="split__eyebrow">Sculpted pile</div>
