@@ -3,31 +3,17 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta
+  http-equiv="Content-Security-Policy"
+  content="default-src 'none'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'; img-src 'self' data:; style-src 'self'; font-src 'self'; script-src 'self'; connect-src 'none'; object-src 'none'; upgrade-insecure-requests"
+/>
 <meta name="description" content="Four progressive projects — from mug rug coaster to sculpted wall piece — each introducing one new variable." />
 <meta property="og:title" content="Projects" />
 <meta property="og:description" content="Four progressive projects — from mug rug coaster to sculpted wall piece — each introducing one new variable." />
 <meta property="og:type" content="website" />
 <title>Projects — The Loop &amp; The Line</title>
-<script>
-  (function () {
-    try {
-      var stored = localStorage.getItem("theme");
-      var theme =
-        stored === "light" || stored === "dark"
-          ? stored
-          : matchMedia("(prefers-color-scheme: dark)").matches
-            ? "dark"
-            : "light";
-      document.documentElement.setAttribute("data-theme", theme);
-    } catch (e) {}
-    document.documentElement.classList.add("js");
-  })();
-</script>
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link rel="preconnect" href="https://api.fontshare.com" crossorigin />
-<link href="https://api.fontshare.com/v2/css?f[]=boska@400,400i,500,700&display=swap" rel="stylesheet" />
-<link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,300..700;1,400..600&display=swap" rel="stylesheet" />
+<script src="js/theme-boot.js"></script>
+<link rel="stylesheet" href="css/fonts.css" />
 <link rel="stylesheet" href="css/style.css" />
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><circle cx='16' cy='16' r='14' fill='%23f4efe6' stroke='%23253a52' stroke-width='2'/><circle cx='16' cy='16' r='4' fill='%23b95f37'/></svg>" />
 
@@ -146,13 +132,13 @@
 
     <h3>Steps</h3>
     <ol class="steps">
-      <li><h4>Prep the fabric</h4>Cut, tape edges, iron. Mount drum-tight in the hoop.</li>
-      <li><h4>Mark the design</h4>Draw a 5" square in the center. Draw a horizontal line dividing it in half.</li>
-      <li><h4>Punch the outline of the square first</h4>All four sides, tightly packed stitches, in either color.</li>
-      <li><h4>Punch the horizontal midline</h4>Tightly packed, in one of your two colors.</li>
-      <li><h4>Fill the top half</h4>Rows parallel to the horizontal midline, working upward. Row spacing: ~3mm. Alternate row direction.</li>
-      <li><h4>Fill the bottom half</h4>Same technique, different color.</li>
-      <li><h4>Trim tails, hem edges, steam-block</h4>Per Module 06.</li>
+      <li><strong class="steps__title">Prep the fabric</strong>Cut, tape edges, iron. Mount drum-tight in the hoop.</li>
+      <li><strong class="steps__title">Mark the design</strong>Draw a 5" square in the center. Draw a horizontal line dividing it in half.</li>
+      <li><strong class="steps__title">Punch the outline of the square first</strong>All four sides, tightly packed stitches, in either color.</li>
+      <li><strong class="steps__title">Punch the horizontal midline</strong>Tightly packed, in one of your two colors.</li>
+      <li><strong class="steps__title">Fill the top half</strong>Rows parallel to the horizontal midline, working upward. Row spacing: ~3mm. Alternate row direction.</li>
+      <li><strong class="steps__title">Fill the bottom half</strong>Same technique, different color.</li>
+      <li><strong class="steps__title">Trim tails, hem edges, steam-block</strong>Per Module 06.</li>
     </ol>
 
     <div class="woven-divider" aria-hidden="true"></div>
@@ -235,15 +221,15 @@
 
     <h3>Order of operations</h3>
     <ol class="steps">
-      <li><h4>Punch the tallest features first</h4>Deepest needle setting. Complete every tall region including outlines.</li>
-      <li><h4>Reset to medium, punch mid-ground</h4>Butt tightly against the tall regions.</li>
-      <li><h4>Reset to shortest, punch background</h4>Fill everything left.</li>
-      <li><h4>Take off the frame</h4>You'll do all shearing and carving off-frame.</li>
-      <li><h4>Optional: shear the background flat</h4>To turn it from loop pile into cut pile.</li>
-      <li><h4>Carve edges</h4>Work a narrow trench of shorter fibers along the border of the mid-ground, so it visually pops.</li>
-      <li><h4>Steam-block</h4>Face-down, damp cloth, hot iron, press don't slide.</li>
-      <li><h4>Optional glue-back</h4>Only if the carving exposed cut ends that need locking.</li>
-      <li><h4>Finish edges and mount</h4>Wood dowel or velcro strip.</li>
+      <li><strong class="steps__title">Punch the tallest features first</strong>Deepest needle setting. Complete every tall region including outlines.</li>
+      <li><strong class="steps__title">Reset to medium, punch mid-ground</strong>Butt tightly against the tall regions.</li>
+      <li><strong class="steps__title">Reset to shortest, punch background</strong>Fill everything left.</li>
+      <li><strong class="steps__title">Take off the frame</strong>You'll do all shearing and carving off-frame.</li>
+      <li><strong class="steps__title">Optional: shear the background flat</strong>To turn it from loop pile into cut pile.</li>
+      <li><strong class="steps__title">Carve edges</strong>Work a narrow trench of shorter fibers along the border of the mid-ground, so it visually pops.</li>
+      <li><strong class="steps__title">Steam-block</strong>Face-down, damp cloth, hot iron, press don't slide.</li>
+      <li><strong class="steps__title">Optional glue-back</strong>Only if the carving exposed cut ends that need locking.</li>
+      <li><strong class="steps__title">Finish edges and mount</strong>Wood dowel or velcro strip.</li>
     </ol>
 
   </div>
@@ -256,7 +242,7 @@
       <p>A self-directed field guide to punch needle rug making — from your first hoop through sculpted, carved pile. Built as a personal reference by a maker, for a maker.</p>
     </div>
     <div class="footer-col">
-      <h4>Course</h4>
+      <p class="footer-col__title">Course</p>
       <ul>
         <li><a href="curriculum.html">Curriculum</a></li>
         <li><a href="tools.html">Tools &amp; Materials</a></li>
@@ -266,7 +252,7 @@
       </ul>
     </div>
     <div class="footer-col">
-      <h4>Reference</h4>
+      <p class="footer-col__title">Reference</p>
       <ul>
         <li><a href="troubleshooting.html">Troubleshooting</a></li>
         <li><a href="glossary.html">Glossary</a></li>

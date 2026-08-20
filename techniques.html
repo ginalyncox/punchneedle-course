@@ -3,31 +3,17 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta
+  http-equiv="Content-Security-Policy"
+  content="default-src 'none'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'; img-src 'self' data:; style-src 'self'; font-src 'self'; script-src 'self'; connect-src 'none'; object-src 'none'; upgrade-insecure-requests"
+/>
 <meta name="description" content="The five mechanical variables that make loops stay in — grip, threading, anchor stitches, row spacing, and corner turns." />
 <meta property="og:title" content="Module 04 · Core Technique" />
 <meta property="og:description" content="The five mechanical variables that make loops stay in — grip, threading, anchor stitches, row spacing, and corner turns." />
 <meta property="og:type" content="website" />
 <title>Module 04 · Core Technique — The Loop &amp; The Line</title>
-<script>
-  (function () {
-    try {
-      var stored = localStorage.getItem("theme");
-      var theme =
-        stored === "light" || stored === "dark"
-          ? stored
-          : matchMedia("(prefers-color-scheme: dark)").matches
-            ? "dark"
-            : "light";
-      document.documentElement.setAttribute("data-theme", theme);
-    } catch (e) {}
-    document.documentElement.classList.add("js");
-  })();
-</script>
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link rel="preconnect" href="https://api.fontshare.com" crossorigin />
-<link href="https://api.fontshare.com/v2/css?f[]=boska@400,400i,500,700&display=swap" rel="stylesheet" />
-<link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,300..700;1,400..600&display=swap" rel="stylesheet" />
+<script src="js/theme-boot.js"></script>
+<link rel="stylesheet" href="css/fonts.css" />
 <link rel="stylesheet" href="css/style.css" />
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><circle cx='16' cy='16' r='14' fill='%23f4efe6' stroke='%23253a52' stroke-width='2'/><circle cx='16' cy='16' r='4' fill='%23b95f37'/></svg>" />
 
@@ -105,15 +91,15 @@
 
     <ol class="steps">
       <li>
-        <h4>Thread the shaft</h4>
+        <strong class="steps__title">Thread the shaft</strong>
         Push the wire threader down through the top of the needle handle and out through the eye. Hook the yarn end into the wire loop. Pull the wire back up through the handle — the yarn follows through the shaft.
       </li>
       <li>
-        <h4>Thread the eye</h4>
+        <strong class="steps__title">Thread the eye</strong>
         Now thread the yarn end through the eye of the needle (the hole near the tip). Some needles have a second small hole on the side — check your specific model's instructions.
       </li>
       <li>
-        <h4>Leave a 3–4" tail</h4>
+        <strong class="steps__title">Leave a 3–4" tail</strong>
         On the loop side (the side that will be the finished front of the rug). This tail anchors your first stitch.
       </li>
     </ol>
@@ -132,15 +118,15 @@
     <h3>Starting a section</h3>
     <ol class="steps">
       <li>
-        <h4>Punch the first stitch normally</h4>
+        <strong class="steps__title">Punch the first stitch normally</strong>
         Push the needle all the way down until the handle touches. Lift straight up until the tip grazes the surface.
       </li>
       <li>
-        <h4>Poke the tail through</h4>
+        <strong class="steps__title">Poke the tail through</strong>
         Reach under the fabric and pull the 3–4" starting tail through to the loop side (the finished front). You want all tails on the loop side, not the punching side.
       </li>
       <li>
-        <h4>Anchor: punch back into the same hole, then a stitch forward</h4>
+        <strong class="steps__title">Anchor: punch back into the same hole, then a stitch forward</strong>
         Some techniques call for punch-forward-then-back-into-first-hole. Either way, the point is to double-secure the starting stitch so the tail can't yank the first loop out.
       </li>
     </ol>
@@ -148,15 +134,15 @@
     <h3>Ending a section</h3>
     <ol class="steps">
       <li>
-        <h4>Do a reverse anchor</h4>
+        <strong class="steps__title">Do a reverse anchor</strong>
         At the end of the row or shape, punch back into the previous hole (or one hole back) to double-secure the last loop.
       </li>
       <li>
-        <h4>Cut the yarn on the punching side</h4>
+        <strong class="steps__title">Cut the yarn on the punching side</strong>
         Leave a 3–4" tail. Pull it through to the loop side.
       </li>
       <li>
-        <h4>Never trim tails until the piece is off the frame</h4>
+        <strong class="steps__title">Never trim tails until the piece is off the frame</strong>
         Keep them long during the punching. They only get trimmed as part of finishing (see Module 06).
       </li>
     </ol>
@@ -179,9 +165,9 @@
 
     <h3>Order of operations for a shape</h3>
     <ol class="steps">
-      <li><h4>Punch the outline first</h4>Follow your drawn line, one row of tightly packed stitches. This sets the shape's edge cleanly.</li>
-      <li><h4>Fill from the outline inward</h4>Punch parallel rows working toward the center. Each row should sit close enough that no gaps show through to the punching side but not so close that loops pile up.</li>
-      <li><h4>Alternate row direction</h4>Row 1 goes left-to-right, row 2 right-to-left, row 3 left-to-right. This is called the brick pattern — each stitch sits between the two above it, not directly over the previous row's holes.</li>
+      <li><strong class="steps__title">Punch the outline first</strong>Follow your drawn line, one row of tightly packed stitches. This sets the shape's edge cleanly.</li>
+      <li><strong class="steps__title">Fill from the outline inward</strong>Punch parallel rows working toward the center. Each row should sit close enough that no gaps show through to the punching side but not so close that loops pile up.</li>
+      <li><strong class="steps__title">Alternate row direction</strong>Row 1 goes left-to-right, row 2 right-to-left, row 3 left-to-right. This is called the brick pattern — each stitch sits between the two above it, not directly over the previous row's holes.</li>
     </ol>
 
     <div class="callout callout--tip">
@@ -194,19 +180,19 @@
 
     <ol class="steps">
       <li>
-        <h4>Punch the corner stitch fully down</h4>
+        <strong class="steps__title">Punch the corner stitch fully down</strong>
         Handle touches fabric. Keep the needle in the fabric — do not lift.
       </li>
       <li>
-        <h4>While the needle is still down, rotate the handle in your fingers</h4>
+        <strong class="steps__title">While the needle is still down, rotate the handle in your fingers</strong>
         Turn the tool so the open channel points in the new direction of travel. Because the needle stays anchored, this rotation doesn't disturb the loop.
       </li>
       <li>
-        <h4>Lift the needle straight up</h4>
+        <strong class="steps__title">Lift the needle straight up</strong>
         Grazing the surface, as always. Move to the next stitch position.
       </li>
       <li>
-        <h4>Punch again in the new direction</h4>
+        <strong class="steps__title">Punch again in the new direction</strong>
         The first stitch in the new direction should be tight against the corner stitch to lock the turn.
       </li>
     </ol>
@@ -236,7 +222,7 @@
       <p>A self-directed field guide to punch needle rug making — from your first hoop through sculpted, carved pile. Built as a personal reference by a maker, for a maker.</p>
     </div>
     <div class="footer-col">
-      <h4>Course</h4>
+      <p class="footer-col__title">Course</p>
       <ul>
         <li><a href="curriculum.html">Curriculum</a></li>
         <li><a href="tools.html">Tools &amp; Materials</a></li>
@@ -246,7 +232,7 @@
       </ul>
     </div>
     <div class="footer-col">
-      <h4>Reference</h4>
+      <p class="footer-col__title">Reference</p>
       <ul>
         <li><a href="troubleshooting.html">Troubleshooting</a></li>
         <li><a href="glossary.html">Glossary</a></li>
