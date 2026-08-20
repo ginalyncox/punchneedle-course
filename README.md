@@ -27,8 +27,13 @@ A self-directed course website for punch needle rug making — from foundations 
 punchneedle-course/
 ├── src/                    # Page source templates (body only + front-matter comment)
 ├── partials/               # Shared head, header, and footer partials
-├── css/style.css           # Design system + component styles
-├── js/site.js              # Theme toggle, mobile menu, scroll reveal
+├── css/
+│   ├── fonts.css           # @font-face rules for self-hosted Boska + Work Sans
+│   └── style.css           # Design system + component styles
+├── fonts/                  # Self-hosted woff2 font files
+├── js/
+│   ├── theme-boot.js       # Early theme + js-class bootstrap (loaded in <head>)
+│   └── site.js             # Theme toggle, mobile menu, scroll reveal
 ├── generated_assets/       # Original image assets (gitignored)
 ├── assets/                 # Deployed image copies (build.py copies from generated_assets)
 ├── build.py                # Merges partials into each src/*.html page
