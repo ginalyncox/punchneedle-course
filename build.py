@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Build script — merges partials into each src/*.html page."""
 
+import html
 import re
 import shutil
 from pathlib import Path
@@ -25,21 +26,21 @@ def parse_meta(content: str):
             if ":" in line:
                 k, v = line.split(":", 1)
                 meta[k.strip()] = v.strip()
-        content = content[m.end():].strip()
+        content = content[m.end() :].strip()
     return meta, content
 
 
 def render(page_path: Path):
     raw = page_path.read_text()
     meta, body = parse_meta(raw)
-    title = meta.get("TITLE", "Untitled")
-    description = meta.get("DESCRIPTION", "")
+    title = html.escape(meta.get("TITLE", "Untitled"), quote=True)
+    description = html.escape(meta.get("DESCRIPTION", ""), quote=True)
     nav_key = meta.get("NAV", "")
 
     head = (
         HEAD.replace("{{TITLE}}", title)
-            .replace("{{DESCRIPTION}}", description)
-            .replace("{{CSS}}", "css/style.css")
+        .replace("{{DESCRIPTION}}", description)
+        .replace("{{CSS}}", "css/style.css")
     )
     header = HEADER.replace("{{PATH}}", "")
     # Set aria-current on the active nav link
@@ -50,7 +51,7 @@ def render(page_path: Path):
         )
     footer = FOOTER.replace("{{PATH}}", "").replace("{{JS}}", "js/site.js")
 
-    html = f"""<!doctype html>
+    html_out = f"""<!doctype html>
 <html lang="en">
 <head>
 {head}
@@ -65,7 +66,7 @@ def render(page_path: Path):
 </html>
 """
     out_path = OUT / page_path.name
-    out_path.write_text(html)
+    out_path.write_text(html_out)
     return out_path
 
 

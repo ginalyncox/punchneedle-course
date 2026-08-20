@@ -1,3 +1,4 @@
+<a class="skip-link" href="#main">Skip to content</a>
 <header class="site-header">
   <div class="site-header__inner">
     <a href="{{PATH}}index.html" class="site-header__brand" aria-label="The Loop and The Line — home">
@@ -10,7 +11,7 @@
     </a>
 
     <nav class="nav" aria-label="Primary">
-      <div class="nav__links" data-nav-links>
+      <div class="nav__links" data-nav-links id="site-nav">
         <a href="{{PATH}}curriculum.html" data-nav="curriculum">Curriculum</a>
         <a href="{{PATH}}tools.html" data-nav="tools">Tools &amp; Materials</a>
         <a href="{{PATH}}build-your-frame.html" data-nav="build-your-frame">Build a Frame</a>
@@ -21,9 +22,9 @@
       </div>
 
       <div class="nav__actions">
-        <button class="theme-toggle" data-theme-toggle aria-label="Switch color mode"></button>
-        <button class="menu-toggle" data-menu-toggle aria-label="Toggle menu" aria-expanded="false">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        <button type="button" class="theme-toggle" data-theme-toggle aria-label="Switch color mode"></button>
+        <button type="button" class="menu-toggle" data-menu-toggle aria-label="Toggle menu" aria-expanded="false" aria-controls="site-nav">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
         </button>
       </div>
     </nav>

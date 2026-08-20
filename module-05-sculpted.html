@@ -4,10 +4,25 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta name="description" content="Varied pile heights with an adjustable needle, shearing with appliqué scissors, and carving dimensional relief into a punched rug." />
-<meta property="og:title" content="Module 05 · Sculpted & Carved Pile" />
+<meta property="og:title" content="Module 05 · Sculpted &amp; Carved Pile" />
 <meta property="og:description" content="Varied pile heights with an adjustable needle, shearing with appliqué scissors, and carving dimensional relief into a punched rug." />
 <meta property="og:type" content="website" />
-<title>Module 05 · Sculpted & Carved Pile — The Loop &amp; The Line</title>
+<title>Module 05 · Sculpted &amp; Carved Pile — The Loop &amp; The Line</title>
+<script>
+  (function () {
+    try {
+      var stored = localStorage.getItem("theme");
+      var theme =
+        stored === "light" || stored === "dark"
+          ? stored
+          : matchMedia("(prefers-color-scheme: dark)").matches
+            ? "dark"
+            : "light";
+      document.documentElement.setAttribute("data-theme", theme);
+    } catch (e) {}
+    document.documentElement.classList.add("js");
+  })();
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link rel="preconnect" href="https://api.fontshare.com" crossorigin />
@@ -18,6 +33,7 @@
 
 </head>
 <body>
+<a class="skip-link" href="#main">Skip to content</a>
 <header class="site-header">
   <div class="site-header__inner">
     <a href="index.html" class="site-header__brand" aria-label="The Loop and The Line — home">
@@ -30,7 +46,7 @@
     </a>
 
     <nav class="nav" aria-label="Primary">
-      <div class="nav__links" data-nav-links>
+      <div class="nav__links" data-nav-links id="site-nav">
         <a href="curriculum.html" data-nav="curriculum" aria-current="page">Curriculum</a>
         <a href="tools.html" data-nav="tools">Tools &amp; Materials</a>
         <a href="build-your-frame.html" data-nav="build-your-frame">Build a Frame</a>
@@ -41,9 +57,9 @@
       </div>
 
       <div class="nav__actions">
-        <button class="theme-toggle" data-theme-toggle aria-label="Switch color mode"></button>
-        <button class="menu-toggle" data-menu-toggle aria-label="Toggle menu" aria-expanded="false">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        <button type="button" class="theme-toggle" data-theme-toggle aria-label="Switch color mode"></button>
+        <button type="button" class="menu-toggle" data-menu-toggle aria-label="Toggle menu" aria-expanded="false" aria-controls="site-nav">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
         </button>
       </div>
     </nav>
@@ -68,7 +84,7 @@
   <div class="prose">
 
     <figure>
-      <img src="assets/carving.png" alt="Hands using small curved appliqué scissors to carve into dense wool pile of a cream and rust rug, sculpting dimensional relief. Wool fluff surrounds the piece." />
+      <img src="assets/carving.png" width="1024" height="1536" alt="Hands using small curved appliqué scissors to carve into dense wool pile of a cream and rust rug, sculpting dimensional relief. Wool fluff surrounds the piece." />
       <figcaption>Sculpting with appliqué scissors — the curved blades let you carve close to the fabric without catching adjacent loops.</figcaption>
     </figure>
 
@@ -78,8 +94,8 @@
     <p>Typical settings on a Lavor 5.5mm:</p>
     <div class="table-wrap">
       <table class="data-table">
-        <thead>
-          <tr><th>Setting</th><th>Approx pile height</th><th>Use</th></tr>
+        <th scope="col"ead>
+          <tr><th scope="col">Setting</th><th scope="col">Approx pile height</th><th scope="col">Use</th></tr>
         </thead>
         <tbody>
           <tr><td>A / 1 (deepest)</td><td>~2.5 cm</td><td>Shaggy longest pile — good for fringes, faux-fur effects</td></tr>

@@ -5,6 +5,21 @@
 <meta property="og:description" content="{{DESCRIPTION}}" />
 <meta property="og:type" content="website" />
 <title>{{TITLE}} — The Loop &amp; The Line</title>
+<script>
+  (function () {
+    try {
+      var stored = localStorage.getItem("theme");
+      var theme =
+        stored === "light" || stored === "dark"
+          ? stored
+          : matchMedia("(prefers-color-scheme: dark)").matches
+            ? "dark"
+            : "light";
+      document.documentElement.setAttribute("data-theme", theme);
+    } catch (e) {}
+    document.documentElement.classList.add("js");
+  })();
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link rel="preconnect" href="https://api.fontshare.com" crossorigin />
