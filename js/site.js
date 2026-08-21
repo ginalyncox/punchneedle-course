@@ -41,6 +41,8 @@
     if (!menuToggle || !nav) return;
     nav.classList.toggle("is-open", open);
     menuToggle.setAttribute("aria-expanded", open ? "true" : "false");
+    document.body.classList.toggle("nav-open", open);
+    if (open) menuToggle.focus();
   };
 
   if (menuToggle && nav) {
@@ -49,6 +51,11 @@
     });
     document.addEventListener("keydown", (event) => {
       if (event.key === "Escape") setMenuOpen(false);
+    });
+    document.addEventListener("click", (event) => {
+      if (!nav.classList.contains("is-open")) return;
+      if (nav.contains(event.target) || menuToggle.contains(event.target)) return;
+      setMenuOpen(false);
     });
     nav.querySelectorAll("a").forEach((link) => {
       link.addEventListener("click", () => setMenuOpen(false));
