@@ -1,4 +1,4 @@
-// Theme toggle + mobile menu + scroll reveal
+// Theme toggle + mobile menu + scroll reveal + learner utilities
 (function () {
   const root = document.documentElement;
   const toggle = document.querySelector("[data-theme-toggle]");
@@ -41,6 +41,8 @@
     if (!menuToggle || !nav) return;
     nav.classList.toggle("is-open", open);
     menuToggle.setAttribute("aria-expanded", open ? "true" : "false");
+    document.body.classList.toggle("nav-open", open);
+    if (open) menuToggle.focus();
   };
 
   if (menuToggle && nav) {
@@ -50,12 +52,114 @@
     document.addEventListener("keydown", (event) => {
       if (event.key === "Escape") setMenuOpen(false);
     });
+    document.addEventListener("click", (event) => {
+      if (!nav.classList.contains("is-open")) return;
+      if (nav.contains(event.target) || menuToggle.contains(event.target)) return;
+      setMenuOpen(false);
+    });
     nav.querySelectorAll("a").forEach((link) => {
       link.addEventListener("click", () => setMenuOpen(false));
     });
   }
 
-  // Scroll reveal (only when JS enhanced the document)
+  // Live filters (glossary + troubleshooting)
+  document.querySelectorAll("[data-filter-input]").forEach((input) => {
+    const empty = input.parentElement.querySelector("[data-filter-empty]");
+    const scope = input.getAttribute("data-filter-scope");
+    const rootEl = scope
+      ? document.querySelector(`[data-filter-group="${scope}"]`) || document.querySelector("main .prose") || document
+      : document.querySelector("main .prose") || document;
+    const items = () => rootEl.querySelectorAll("[data-filter-item]");
+
+    const apply = () => {
+      const q = input.value.trim().toLowerCase();
+      let visible = 0;
+      items().forEach((el) => {
+        const match = !q || el.textContent.toLowerCase().includes(q);
+        el.hidden = !match;
+        if (match) visible += 1;
+      });
+
+      // Hide glossary section headings that have no visible terms beneath them
+      rootEl.querySelectorAll("h2").forEach((heading) => {
+        let sibling = heading.nextElementSibling;
+        let any = false;
+        while (sibling && sibling.tagName !== "H2") {
+          if (sibling.matches("[data-filter-item]") && !sibling.hidden) any = true;
+          sibling = sibling.nextElementSibling;
+        }
+        if (heading.closest("[data-filter-item]")) return;
+        heading.hidden = q !== "" && !any;
+      });
+
+      if (empty) empty.hidden = visible !== 0 || !q;
+    };
+
+    input.addEventListener("input", apply);
+  });
+
+  // Lesson table of contents from h2s inside main prose
+  const prose = document.querySelector("main .prose");
+  const headings = prose
+    ? Array.from(prose.querySelectorAll("h2")).filter((h) => h.id || h.textContent.trim())
+    : [];
+  if (prose && headings.length >= 3) {
+    const navEl = document.createElement("nav");
+    navEl.className = "toc";
+    navEl.setAttribute("aria-label", "On this page");
+    const title = document.createElement("p");
+    title.className = "toc__title";
+    title.textContent = "On this page";
+    const list = document.createElement("ol");
+    list.className = "toc__list";
+
+    headings.forEach((heading, index) => {
+      if (!heading.id) {
+        const slug = heading.textContent
+          .toLowerCase()
+          .replace(/[^a-z0-9]+/g, "-")
+          .replace(/(^-|-$)/g, "");
+        heading.id = slug || "section-" + (index + 1);
+      }
+      const li = document.createElement("li");
+      const a = document.createElement("a");
+      a.href = "#" + heading.id;
+      a.textContent = heading.textContent.replace(/\s+/g, " ").trim();
+      li.appendChild(a);
+      list.appendChild(li);
+    });
+
+    navEl.appendChild(title);
+    navEl.appendChild(list);
+    const toolbar = prose.querySelector(".ref-toolbar");
+    if (toolbar) toolbar.insertAdjacentElement("afterend", navEl);
+    else prose.insertBefore(navEl, prose.firstElementChild);
+  }
+
+  // Reading progress + back to top
+  const progress = document.createElement("div");
+  progress.className = "read-progress";
+  progress.setAttribute("aria-hidden", "true");
+  document.body.appendChild(progress);
+
+  const toTop = document.createElement("button");
+  toTop.type = "button";
+  toTop.className = "to-top";
+  toTop.setAttribute("aria-label", "Back to top");
+  toTop.innerHTML =
+    '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg>';
+  toTop.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+  document.body.appendChild(toTop);
+
+  const onScroll = () => {
+    toTop.classList.toggle("is-visible", window.scrollY > 480);
+  };
+  window.addEventListener("scroll", onScroll, { passive: true });
+  onScroll();
+
+  // Scroll reveal
   if (!root.classList.contains("js") || !("IntersectionObserver" in window)) {
     document.querySelectorAll(".reveal").forEach((el) => el.classList.add("is-visible"));
     return;
