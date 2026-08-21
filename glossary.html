@@ -11,8 +11,11 @@
 <meta property="og:title" content="Glossary" />
 <meta property="og:description" content="A reference glossary of punch needle terms — fabrics, tools, techniques, finishing vocabulary." />
 <meta property="og:type" content="website" />
+<meta property="og:image" content="assets/hero-frame.png" />
 <title>Glossary — The Loop &amp; The Line</title>
 <script src="js/theme-boot.js"></script>
+<link rel="preload" href="fonts/boska-400-normal.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="fonts/work-sans-normal.woff2" as="font" type="font/woff2" crossorigin />
 <link rel="stylesheet" href="css/fonts.css" />
 <link rel="stylesheet" href="css/style.css" />
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><circle cx='16' cy='16' r='14' fill='%23f4efe6' stroke='%23253a52' stroke-width='2'/><circle cx='16' cy='16' r='4' fill='%23b95f37'/></svg>" />
@@ -63,64 +66,69 @@
 
 <section>
   <div class="prose">
+    <div class="ref-toolbar">
+      <label class="sr-only" for="glossary-filter">Filter glossary terms</label>
+      <input type="search" id="glossary-filter" data-filter-input data-filter-scope="glossary" placeholder="Filter terms — monks cloth, shearing, brick pattern…" autocomplete="off" />
+      <p class="ref-toolbar__hint" data-filter-empty hidden>No terms match that filter.</p>
+    </div>
 
     <h2>Fabrics &amp; <em>backing</em></h2>
-    <p><strong>Monks cloth.</strong> The standard punch needle rug backing. 100% cotton, even weave, most useful at 12 holes per inch (hpi). Cream/natural color with visible white grid stripes every 2 inches. Used with rug-scale punch needles and worsted/rug-weight yarn.</p>
-    <p><strong>Rug warp.</strong> A tighter, more durable cotton fabric. Good for floor rugs that get walked on. Slightly harder to punch through than monks cloth.</p>
-    <p><strong>Primitive linen / rug hooking linen.</strong> A traditional rug hooker's backing. Denser than monks cloth. More expensive. Excellent longevity.</p>
-    <p><strong>Weaver's cloth.</strong> A tightly-woven cotton/polyester blend. Used only with fine embroidery punch needles and embroidery floss. <em>Not</em> compatible with rug-scale tools.</p>
-    <p><strong>Burlap.</strong> Loose-weave jute. Cheap and tempting; unreliable for punch needle because the weave is too open and irregular for loops to stay secure. Also degrades relatively quickly. Avoid.</p>
-    <p><strong>Warp and weft.</strong> The two directions of a woven fabric. Warp runs lengthwise (parallel to the selvedge); weft runs crosswise. When mounting, align warp and weft parallel to your frame's edges — never on the bias.</p>
-    <p><strong>Selvedge.</strong> The tightly-woven finished edge of a bolt of fabric. Usually cream or with a manufacturer's mark. Don't punch through it; trim off if it interferes with framing.</p>
+    <p data-filter-item><strong>Monks cloth.</strong> The standard punch needle rug backing. 100% cotton, even weave, most useful at 12 holes per inch (hpi). Cream/natural color with visible white grid stripes every 2 inches. Used with rug-scale punch needles and worsted/rug-weight yarn.</p>
+    <p data-filter-item><strong>Rug warp.</strong> A tighter, more durable cotton fabric. Good for floor rugs that get walked on. Slightly harder to punch through than monks cloth.</p>
+    <p data-filter-item><strong>Primitive linen / rug hooking linen.</strong> A traditional rug hooker's backing. Denser than monks cloth. More expensive. Excellent longevity.</p>
+    <p data-filter-item><strong>Weaver's cloth.</strong> A tightly-woven cotton/polyester blend. Used only with fine embroidery punch needles and embroidery floss. <em>Not</em> compatible with rug-scale tools.</p>
+    <p data-filter-item><strong>Burlap.</strong> Loose-weave jute. Cheap and tempting; unreliable for punch needle because the weave is too open and irregular for loops to stay secure. Also degrades relatively quickly. Avoid.</p>
+    <p data-filter-item><strong>Warp and weft.</strong> The two directions of a woven fabric. Warp runs lengthwise (parallel to the selvedge); weft runs crosswise. When mounting, align warp and weft parallel to your frame's edges — never on the bias.</p>
+    <p data-filter-item><strong>Selvedge.</strong> The tightly-woven finished edge of a bolt of fabric. Usually cream or with a manufacturer's mark. Don't punch through it; trim off if it interferes with framing.</p>
 
     <h2>Tools &amp; <em>needles</em></h2>
-    <p><strong>Punch needle.</strong> A hollow-shafted tool with an eye near the tip for threading yarn. Punched through fabric to create loop pile on the reverse side.</p>
-    <p><strong>Oxford-style punch needle.</strong> A fixed-depth punch needle, usually wooden, with a metal shaft that sets one specific loop height. The Amy Oxford brand is the canonical example. Named for the town in Vermont where they're made.</p>
-    <p><strong>Adjustable punch needle.</strong> A punch needle with a rotating collar or dial that changes how far the needle protrudes past the handle — changing loop height. Common brands: Lavor, Ukrainian-style, Igolochkoy.</p>
-    <p><strong>Fine embroidery punch needle.</strong> A thin punch needle designed for embroidery floss and fine yarn. Not for rugs.</p>
-    <p><strong>Threader / threading wire.</strong> A thin wire loop used to pull yarn through a punch needle shaft. Every punch needle should come with one.</p>
-    <p><strong>Open channel.</strong> The slot cut into the side of the metal shaft, near the eye. Its position determines the direction of yarn feed — it should face the direction of travel.</p>
-    <p><strong>Eye.</strong> The hole in the needle tip through which the yarn passes.</p>
-    <p><strong>Gripper frame.</strong> A wooden frame with strips of angled metal teeth (gripper strips) lining the inside edge. Fabric is pressed onto the teeth to hold drum-tight without staples.</p>
-    <p><strong>Gripper strip / carpet tack strip.</strong> A wooden strip embedded with angled metal points, used to line a gripper frame. Carpet tack strip from a flooring store is the DIY equivalent.</p>
-    <p><strong>Stretcher bars.</strong> Wooden art-canvas bars that slot together into a rectangle. Fabric is stapled or tacked to them. Simpler and cheaper than a gripper frame.</p>
-    <p><strong>Embroidery hoop.</strong> A pair of concentric rings that pinch fabric between them. Cheapest frame option; slackens frequently. Best for coasters and small samples.</p>
-    <p><strong>Appliqué scissors.</strong> Small scissors with one flat, duckbill-shaped blade. Used for shearing loop pile close to the fabric without cutting the backing.</p>
+    <p data-filter-item><strong>Punch needle.</strong> A hollow-shafted tool with an eye near the tip for threading yarn. Punched through fabric to create loop pile on the reverse side.</p>
+    <p data-filter-item><strong>Oxford-style punch needle.</strong> A fixed-depth punch needle, usually wooden, with a metal shaft that sets one specific loop height. The Amy Oxford brand is the canonical example. Named for the town in Vermont where they're made.</p>
+    <p data-filter-item><strong>Adjustable punch needle.</strong> A punch needle with a rotating collar or dial that changes how far the needle protrudes past the handle — changing loop height. Common brands: Lavor, Ukrainian-style, Igolochkoy.</p>
+    <p data-filter-item><strong>Fine embroidery punch needle.</strong> A thin punch needle designed for embroidery floss and fine yarn. Not for rugs.</p>
+    <p data-filter-item><strong>Threader / threading wire.</strong> A thin wire loop used to pull yarn through a punch needle shaft. Every punch needle should come with one.</p>
+    <p data-filter-item><strong>Open channel.</strong> The slot cut into the side of the metal shaft, near the eye. Its position determines the direction of yarn feed — it should face the direction of travel.</p>
+    <p data-filter-item><strong>Eye.</strong> The hole in the needle tip through which the yarn passes.</p>
+    <p data-filter-item><strong>Gripper frame.</strong> A wooden frame with strips of angled metal teeth (gripper strips) lining the inside edge. Fabric is pressed onto the teeth to hold drum-tight without staples.</p>
+    <p data-filter-item><strong>Gripper strip / carpet tack strip.</strong> A wooden strip embedded with angled metal points, used to line a gripper frame. Carpet tack strip from a flooring store is the DIY equivalent.</p>
+    <p data-filter-item><strong>Stretcher bars.</strong> Wooden art-canvas bars that slot together into a rectangle. Fabric is stapled or tacked to them. Simpler and cheaper than a gripper frame.</p>
+    <p data-filter-item><strong>Embroidery hoop.</strong> A pair of concentric rings that pinch fabric between them. Cheapest frame option; slackens frequently. Best for coasters and small samples.</p>
+    <p data-filter-item><strong>Appliqué scissors.</strong> Small scissors with one flat, duckbill-shaped blade. Used for shearing loop pile close to the fabric without cutting the backing.</p>
 
     <h2>Yarn <em>terms</em></h2>
-    <p><strong>Yarn weight.</strong> A standardized measure of yarn thickness. Numbered 0 (lace) through 7 (jumbo). Rug punch needles typically use weight 4 (worsted) or 5 (bulky/rug).</p>
-    <p><strong>Worsted-weight yarn.</strong> Weight 4. The standard yarn for most rug punch needle work.</p>
-    <p><strong>Rug yarn.</strong> A category of very durable, tightly-spun wool yarn made for rug hooking and punch needle. Often 100% wool, weight 5.</p>
-    <p><strong>Wool yarn.</strong> The traditional and best-performing fiber for rug work. Wool's natural scales grip the fabric weave better than synthetic fibers.</p>
-    <p><strong>Loose puddle.</strong> A tension-buffer heap of yarn pulled out from the ball and left slack near your work. The needle draws from the puddle, not directly from the ball.</p>
+    <p data-filter-item><strong>Yarn weight.</strong> A standardized measure of yarn thickness. Numbered 0 (lace) through 7 (jumbo). Rug punch needles typically use weight 4 (worsted) or 5 (bulky/rug).</p>
+    <p data-filter-item><strong>Worsted-weight yarn.</strong> Weight 4. The standard yarn for most rug punch needle work.</p>
+    <p data-filter-item><strong>Rug yarn.</strong> A category of very durable, tightly-spun wool yarn made for rug hooking and punch needle. Often 100% wool, weight 5.</p>
+    <p data-filter-item><strong>Wool yarn.</strong> The traditional and best-performing fiber for rug work. Wool's natural scales grip the fabric weave better than synthetic fibers.</p>
+    <p data-filter-item><strong>Loose puddle.</strong> A tension-buffer heap of yarn pulled out from the ball and left slack near your work. The needle draws from the puddle, not directly from the ball.</p>
 
     <h2>Technique <em>vocabulary</em></h2>
-    <p><strong>Loop pile.</strong> The surface texture produced by unhooked punch needle work — every loop is intact, forming a bumpy, plush surface.</p>
-    <p><strong>Cut pile.</strong> Loop pile that has been sheared across the top, converting each loop into two upright yarn ends. Produces a velvety, denser-looking surface.</p>
-    <p><strong>Sculpted pile.</strong> A piece with intentionally varied loop heights across different regions, punched with an adjustable needle.</p>
-    <p><strong>Carved pile / relief.</strong> Cut pile that has been trimmed at varying heights across a piece, producing visible dimensional shadows.</p>
-    <p><strong>Shearing.</strong> Cutting the tops off loops to convert loop pile into cut pile. Done with appliqué scissors on the finished front side.</p>
-    <p><strong>Anchor stitch / anchoring.</strong> A double-secured first (or last) stitch of a color section, done by punching back into the previous hole to lock the yarn in place. Prevents the section from unraveling.</p>
-    <p><strong>Brick pattern.</strong> Row spacing where each row's stitches sit between the stitches of the previous row — offset rather than aligned. Produces the densest, most stable fill.</p>
-    <p><strong>Outline first, fill inward.</strong> The standard order for punching a shape: punch a tightly-packed row along the design's outline, then fill parallel to that outline moving toward the center.</p>
-    <p><strong>Drum-tight.</strong> The tension state monks cloth should be in on the frame — tight enough to sound like a low drum when flicked.</p>
-    <p><strong>Frogging.</strong> Undoing punched work by pulling loops back out. From the knitting term ("rip it, rip it"). Punch needle is remarkably forgiving — pulled-out loops leave the fabric essentially undamaged as long as you didn't cut the threads.</p>
-    <p><strong>Punching side vs. loop side.</strong> The side of the fabric you punch from is the "back" or "punching side"; the finished side with the visible loops is the "front" or "loop side."</p>
+    <p data-filter-item><strong>Loop pile.</strong> The surface texture produced by unhooked punch needle work — every loop is intact, forming a bumpy, plush surface.</p>
+    <p data-filter-item><strong>Cut pile.</strong> Loop pile that has been sheared across the top, converting each loop into two upright yarn ends. Produces a velvety, denser-looking surface.</p>
+    <p data-filter-item><strong>Sculpted pile.</strong> A piece with intentionally varied loop heights across different regions, punched with an adjustable needle.</p>
+    <p data-filter-item><strong>Carved pile / relief.</strong> Cut pile that has been trimmed at varying heights across a piece, producing visible dimensional shadows.</p>
+    <p data-filter-item><strong>Shearing.</strong> Cutting the tops off loops to convert loop pile into cut pile. Done with appliqué scissors on the finished front side.</p>
+    <p data-filter-item><strong>Anchor stitch / anchoring.</strong> A double-secured first (or last) stitch of a color section, done by punching back into the previous hole to lock the yarn in place. Prevents the section from unraveling.</p>
+    <p data-filter-item><strong>Brick pattern.</strong> Row spacing where each row's stitches sit between the stitches of the previous row — offset rather than aligned. Produces the densest, most stable fill.</p>
+    <p data-filter-item><strong>Outline first, fill inward.</strong> The standard order for punching a shape: punch a tightly-packed row along the design's outline, then fill parallel to that outline moving toward the center.</p>
+    <p data-filter-item><strong>Drum-tight.</strong> The tension state monks cloth should be in on the frame — tight enough to sound like a low drum when flicked.</p>
+    <p data-filter-item><strong>Frogging.</strong> Undoing punched work by pulling loops back out. From the knitting term ("rip it, rip it"). Punch needle is remarkably forgiving — pulled-out loops leave the fabric essentially undamaged as long as you didn't cut the threads.</p>
+    <p data-filter-item><strong>Punching side vs. loop side.</strong> The side of the fabric you punch from is the "back" or "punching side"; the finished side with the visible loops is the "front" or "loop side."</p>
 
     <h2>Finishing <em>terms</em></h2>
-    <p><strong>Tails.</strong> The 3–4 inch yarn ends left at the start and end of each color section, pulled through to the loop side. Trimmed flush with the surrounding pile as part of finishing.</p>
-    <p><strong>Whipstitch.</strong> A hand-stitching technique where the needle goes over the edge and back down in a diagonal loop. Used to hem the folded raw edge of a rug.</p>
-    <p><strong>Blindstitch.</strong> A stitching technique where the thread is caught in the fold of the fabric and the stitches don't show on the front side.</p>
-    <p><strong>Miter.</strong> A diagonal fold at a corner that produces a flat, clean 90° finish. Used when hemming the raw monks cloth border of a finished rug.</p>
-    <p><strong>Glue-back / latex-back.</strong> A liquid latex or fabric medium applied to the back of a finished rug to permanently lock every loop in place. Recommended for floor rugs, optional for wall pieces.</p>
-    <p><strong>Steam-blocking.</strong> Flattening a finished piece by pressing it face-down with a damp cloth and a hot iron. Relaxes the fibers and settles the warp of the fabric.</p>
-    <p><strong>Twill tape.</strong> A woven cotton ribbon, usually 1"–1.5" wide, used for edge binding.</p>
+    <p data-filter-item><strong>Tails.</strong> The 3–4 inch yarn ends left at the start and end of each color section, pulled through to the loop side. Trimmed flush with the surrounding pile as part of finishing.</p>
+    <p data-filter-item><strong>Whipstitch.</strong> A hand-stitching technique where the needle goes over the edge and back down in a diagonal loop. Used to hem the folded raw edge of a rug.</p>
+    <p data-filter-item><strong>Blindstitch.</strong> A stitching technique where the thread is caught in the fold of the fabric and the stitches don't show on the front side.</p>
+    <p data-filter-item><strong>Miter.</strong> A diagonal fold at a corner that produces a flat, clean 90° finish. Used when hemming the raw monks cloth border of a finished rug.</p>
+    <p data-filter-item><strong>Glue-back / latex-back.</strong> A liquid latex or fabric medium applied to the back of a finished rug to permanently lock every loop in place. Recommended for floor rugs, optional for wall pieces.</p>
+    <p data-filter-item><strong>Steam-blocking.</strong> Flattening a finished piece by pressing it face-down with a damp cloth and a hot iron. Relaxes the fibers and settles the warp of the fabric.</p>
+    <p data-filter-item><strong>Twill tape.</strong> A woven cotton ribbon, usually 1"–1.5" wide, used for edge binding.</p>
 
     <h2>Related <em>crafts</em></h2>
-    <p><strong>Rug hooking.</strong> A traditional textile craft using a small hooked tool to pull loops of wool strips up through backing fabric from below. You work on the finished front side. Slower than punch needle. Produces very similar-looking finished work.</p>
-    <p><strong>Rug tufting.</strong> A modern method using an electric or pneumatic tufting gun to shoot yarn into backing fabric at high speed. Same loop-formation principle as punch needle but automated. Much faster; requires a much larger frame and setup.</p>
-    <p><strong>Latch hook.</strong> A rug-making technique using a special hook to tie individual pre-cut yarn strands onto a mesh backing. Very slow; kit-based; produces a shag-pile finish. Not related to punch needle mechanically.</p>
-    <p><strong>Punch needle embroidery.</strong> The fine-scale version of the same technique, done with embroidery floss and a fine needle on weaver's cloth. Same tool family, different scale.</p>
+    <p data-filter-item><strong>Rug hooking.</strong> A traditional textile craft using a small hooked tool to pull loops of wool strips up through backing fabric from below. You work on the finished front side. Slower than punch needle. Produces very similar-looking finished work.</p>
+    <p data-filter-item><strong>Rug tufting.</strong> A modern method using an electric or pneumatic tufting gun to shoot yarn into backing fabric at high speed. Same loop-formation principle as punch needle but automated. Much faster; requires a much larger frame and setup.</p>
+    <p data-filter-item><strong>Latch hook.</strong> A rug-making technique using a special hook to tie individual pre-cut yarn strands onto a mesh backing. Very slow; kit-based; produces a shag-pile finish. Not related to punch needle mechanically.</p>
+    <p data-filter-item><strong>Punch needle embroidery.</strong> The fine-scale version of the same technique, done with embroidery floss and a fine needle on weaver's cloth. Same tool family, different scale.</p>
 
   </div>
 </section>
